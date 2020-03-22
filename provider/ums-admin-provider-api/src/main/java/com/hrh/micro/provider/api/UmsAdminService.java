@@ -26,4 +26,21 @@ public interface UmsAdminService {
      * @return {@link UmsAdmin}
      */
     UmsAdmin get(String userName);
+
+    /**
+     * 更新用户
+     *
+     * @param umsAdmin {@link UmsAdmin}
+     * @return
+     */
+    int update(UmsAdmin umsAdmin);
+
+
+    /**
+     * 跟新用户头像
+     * @param username 用户名
+     * @param path 图片路径
+     * @return
+     */
+    int modifyIcon(String username, String path);
 }

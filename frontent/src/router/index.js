@@ -77,6 +77,35 @@ export const constantRoutes = [
     ]
   },
 
+// 用户
+  {
+    path: '/profile',
+    component: Layout,
+    redirect: '/profile/info',
+    name: 'info',
+    meta: { title: '个人信息', icon: 'example' },
+    children: [
+      {
+        path: 'info',
+        name: 'info',
+        component: () => import('@/views/user/info/index'),
+        meta: { title: '我的信息', icon: 'table' }
+      },
+      {
+        path: 'password',
+        name: 'password',
+        component: () => import('@/views/user/password/index'),
+        meta: { title: '密码管理', icon: 'tree' }
+      },
+      {
+        path: 'icon',
+        name: 'ProfileIcon',
+        component: () => import('@/views/user/icon/index'),
+        meta: { title: '修改头像' }
+      }
+    ]
+  },
+
   {
     path: '/form',
     component: Layout,

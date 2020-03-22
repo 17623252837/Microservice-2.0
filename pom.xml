@@ -17,6 +17,7 @@
     <modules>
         <module>dependencies</module>
         <module>commons</module>
+        <module>oss</module>
         <module>configuration</module>
         <module>provider</module>
         <module>business</module>
